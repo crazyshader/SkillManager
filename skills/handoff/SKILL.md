@@ -1,16 +1,24 @@
 ---
 name: handoff
-description: Compact the current conversation into a handoff document for another agent to pick up.
-argument-hint: "What will the next session be used for?"
+description: 将当前对话压缩为一份交接文档，供另一个代理接手继续工作。
+argument-hint: "下一个会话将用于做什么？"
 disable-model-invocation: true
 ---
 
-Write a handoff document summarising the current conversation so a fresh agent can continue the work. Save to the temporary directory of the user's OS (`$TMPDIR`, else `/tmp`; `%TEMP%` on Windows) - not the current workspace.
+撰写一份交接文档，总结当前对话，使全新的代理能够接续工作。文档保存到系统临时目录（Windows 为 `%TEMP%`，其他系统为 `$TMPDIR` 或 `/tmp`），不要保存到当前工作区。
 
-Include a "suggested skills" section in the document, naming which skills the next agent should call the Skill tool for.
+文档按以下章节组织：
 
-Do not duplicate content already captured in other artifacts (specs, plans, ADRs, issues, commits, diffs). Reference them by path or URL instead.
+1. **目标**：用户要完成什么，以及当前进度。
+2. **已做的决定**：每项决定及其原因。
+3. **当前状态**：已修改的文件、已安装的产物，以及它们的路径。
+4. **未完成事项**：按顺序列出，每项写明完成标准。
+5. **风险与注意事项**：已知的陷阱、未验证的假设、需要用户确认的事项。
+6. **建议使用的 skills**：下一个代理应通过 Skill 工具调用的 skill，写出准确名称。
 
-Redact any sensitive information, such as API keys, passwords, or personally identifiable information.
+规则：
+- 不重复规格说明、计划、ADR、issue、提交记录或 diff 中已有的内容，改用路径或 URL 引用。
+- 脱敏所有敏感信息，例如 API 密钥、密码和个人身份信息。
+- 如果用户传入了参数，把它当作下一个会话的重点，并据此调整内容。
 
-If the user passed arguments, treat them as a description of what the next session will focus on and tailor the doc accordingly.
+完成标准：文件已写入临时目录，并能被读取。向用户报告完整路径。
