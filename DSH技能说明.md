@@ -7,6 +7,10 @@
 
 | 技能 | 触发方式 | 说明 |
 |---|---|---|
+| `code-review` | 仅手动 | 审查某个起点以来的改动，并行对照编码规范和 spec，输出两份报告。 |
+| `diagnosing-bugs` | 仅手动 | 排查难复现的 bug 或性能退化：先建立检查命令，再缩小范围、验证假设、修复。 |
+| `research` | 仅手动 | 用一手资料调研问题，结论连同来源写入仓库的 Markdown 文件。 |
+| `retro` | 模型可自动调用 | 复盘一次编码会话，提出改进导航、自动检查、编码规范、AGENTS.md 和工具调用成本的建议。 |
 | `grill-me` | 仅手动（`/grill-me`） | 动手前逐项追问，直到达成共识。 |
 | `handoff` | 仅手动 | 将当前对话压缩为交接文档，保存到系统临时目录。 |
 | `reverse-engineer-anything` | 仅手动 | 逆向分析已发布的二进制或包，附带 `references/` 参考文档。原为第三方插件 `rea-bundle` 提供，本地副本已改为手动触发。 |
@@ -40,4 +44,4 @@
 | 日期 | 变更 |
 |---|---|
 | 2026-11-09 | 首次整理。 |
-| 2026-11-10 | 移除已合并的 `grilling` 记录；`grill-me`、`handoff`、`reverse-engineer-anything` 改为用户自建并标注手动触发；`reverse-engineer-anything` 改为本地副本；`writing-for-agents` 改为仅手动触发。 |
+| 2026-11-10 | 新增 `code-review`、`diagnosing-bugs`、`research`、`retro`；移除已合并的 `grilling` 记录；`grill-me`、`handoff`、`reverse-engineer-anything` 改为用户自建并标注手动触发；`reverse-engineer-anything` 改为本地副本；`writing-for-agents` 改为仅手动触发。 |

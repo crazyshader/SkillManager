@@ -6,8 +6,12 @@
 
 ```
 skills/
+├── code-review/               # 审查一段改动，分别对照编码规范和 spec，仅手动触发
+├── diagnosing-bugs/           # 排查难复现的 bug 或性能退化，仅手动触发
 ├── grill-me/                  # 动手前的追问式压力测试，仅手动触发（/grill-me）
 ├── handoff/                   # 将当前对话压缩为交接文档，仅手动触发
+├── research/                  # 用一手资料调研问题并写入仓库，仅手动触发
+├── retro/                     # 复盘编码会话，提出改进 agent 工作环境的建议，模型可自动调用
 ├── reverse-engineer-anything/ # 逆向分析与 AgentEnv 重建，仅手动触发
 │   └── references/            # 按需读取的参考文档
 └── writing-for-agents/        # 编写或修改 skill、AGENTS.md、CLAUDE.md 的指南
