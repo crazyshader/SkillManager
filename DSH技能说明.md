@@ -15,10 +15,6 @@
 | `handoff`（`mattpocock/`） | 仅手动 | 将当前对话压缩为交接文档，保存到系统临时目录。 |
 | `reverse-engineer-anything` | 仅手动 | 逆向分析已发布的二进制或包，附带 `references/` 参考文档。原为第三方插件 `rea-bundle` 提供，本地副本已改为手动触发。 |
 | `writing-for-agents`（`mattpocock/`） | 仅手动（`/writing-for-agents`） | 编写或修改 skill、AGENTS.md、CLAUDE.md。 |
-| `brainstorming` | 仅手动 | 第三方：obra/superpowers 7.0.2（MIT），复制自 `E:\AI\superpowers`。动手前澄清需求并写设计文档。 |
-| `writing-plans` | 仅手动 | 第三方：obra/superpowers 7.0.2（MIT）。把设计拆成可执行的小任务。 |
-| `test-driven-development` | 仅手动 | 第三方：obra/superpowers 7.0.2（MIT）。红绿重构流程。 |
-| `systematic-debugging` | 仅手动 | 第三方：obra/superpowers 7.0.2（MIT）。四阶段根因排查。 |
 
 手动触发的技能（设置了 `disable-model-invocation: true`）不会出现在模型的技能目录中，只能由用户输入名称调用。当前所有用户自建技能都已设为手动触发。
 
@@ -51,3 +47,4 @@
 | 2026-11-11 | 从 obra/superpowers 复制 4 个技能到 `skills/superpowers/`，设为手动触发，去掉正文中的 `superpowers:` 前缀，并新增 `SUPERPOWERS-NOTICE.md`。 |
 | 2026-11-11 | 六个 mattpocock 相关技能（含 `grill-me`、`handoff`、`writing-for-agents`）移入 `skills/mattpocock/`。 |
 | 2026-11-10 | 新增 `code-review`、`diagnosing-bugs`、`research`、`retro`；移除已合并的 `grilling` 记录；`grill-me`、`handoff`、`reverse-engineer-anything` 改为用户自建并标注手动触发；`reverse-engineer-anything` 改为本地副本；`writing-for-agents` 改为仅手动触发。 |
+| 2026-11-11 | 删除 `skills/superpowers/`（4 个 obra/superpowers 技能、`SUPERPOWERS-NOTICE.md` 与 `README.md`）。superpowers 相关工作改为直接使用 `E:\AI\superpowers-dsh`（LayneChai/superpowers-dsh，基于上游 v7.0.2）。 |
