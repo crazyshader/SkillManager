@@ -1,20 +1,24 @@
 # DSH 技能说明
 
-> 最后更新：2026-11-10
+> 最后更新：2026-11-11
 > 更新方式：核对 `E:\AI\SkillManager\skills\` 与 `~/.dsh/skills/` 的文件哈希（两侧一致），并参照本会话最新的技能目录。插件启用状态本次未重新检查。
 
 ## 一、用户自建技能（本仓库收录）
 
 | 技能 | 触发方式 | 说明 |
 |---|---|---|
-| `code-review` | 仅手动 | 审查某个起点以来的改动，并行对照编码规范和 spec，输出两份报告。 |
-| `diagnosing-bugs` | 仅手动 | 排查难复现的 bug 或性能退化：先建立检查命令，再缩小范围、验证假设、修复。 |
-| `research` | 仅手动 | 用一手资料调研问题，结论连同来源写入仓库的 Markdown 文件。 |
-| `retro` | 模型可自动调用 | 复盘一次编码会话，提出改进导航、自动检查、编码规范、AGENTS.md 和工具调用成本的建议。 |
+| `code-review`（`mattpocock/`） | 仅手动 | 审查某个起点以来的改动，并行对照编码规范和 spec，输出两份报告。 |
+| `diagnosing-bugs`（`mattpocock/`） | 仅手动 | 排查难复现的 bug 或性能退化：先建立检查命令，再缩小范围、验证假设、修复。 |
+| `research`（`mattpocock/`） | 仅手动 | 用一手资料调研问题，结论连同来源写入仓库的 Markdown 文件。 |
+| `retro`（`mattpocock/`） | 模型可自动调用 | 复盘一次编码会话，提出改进导航、自动检查、编码规范、AGENTS.md 和工具调用成本的建议。 |
 | `grill-me` | 仅手动（`/grill-me`） | 动手前逐项追问，直到达成共识。 |
 | `handoff` | 仅手动 | 将当前对话压缩为交接文档，保存到系统临时目录。 |
 | `reverse-engineer-anything` | 仅手动 | 逆向分析已发布的二进制或包，附带 `references/` 参考文档。原为第三方插件 `rea-bundle` 提供，本地副本已改为手动触发。 |
 | `writing-for-agents` | 仅手动（`/writing-for-agents`） | 编写或修改 skill、AGENTS.md、CLAUDE.md。 |
+| `brainstorming` | 仅手动 | 第三方：obra/superpowers 7.0.2（MIT），复制自 `E:\AI\superpowers`。动手前澄清需求并写设计文档。 |
+| `writing-plans` | 仅手动 | 第三方：obra/superpowers 7.0.2（MIT）。把设计拆成可执行的小任务。 |
+| `test-driven-development` | 仅手动 | 第三方：obra/superpowers 7.0.2（MIT）。红绿重构流程。 |
+| `systematic-debugging` | 仅手动 | 第三方：obra/superpowers 7.0.2（MIT）。四阶段根因排查。 |
 
 手动触发的技能（设置了 `disable-model-invocation: true`）不会出现在模型的技能目录中，只能由用户输入名称调用。当前所有用户自建技能都已设为手动触发。
 
@@ -44,4 +48,6 @@
 | 日期 | 变更 |
 |---|---|
 | 2026-11-09 | 首次整理。 |
+| 2026-11-11 | 从 obra/superpowers 复制 4 个技能到 `skills/superpowers/`，设为手动触发，去掉正文中的 `superpowers:` 前缀，并新增 `SUPERPOWERS-NOTICE.md`。 |
+| 2026-11-11 | 四个 mattpocock 相关技能移入 `skills/mattpocock/`。 |
 | 2026-11-10 | 新增 `code-review`、`diagnosing-bugs`、`research`、`retro`；移除已合并的 `grilling` 记录；`grill-me`、`handoff`、`reverse-engineer-anything` 改为用户自建并标注手动触发；`reverse-engineer-anything` 改为本地副本；`writing-for-agents` 改为仅手动触发。 |
