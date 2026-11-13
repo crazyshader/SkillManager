@@ -1,6 +1,6 @@
 # DSH 技能说明
 
-> 最后更新：2026-11-11
+> 最后更新：2026-11-12
 > 更新方式：核对 `E:\AI\SkillManager\skills\` 与 `~/.dsh/skills/` 的文件哈希（两侧一致），并参照本会话最新的技能目录。插件启用状态本次未重新检查。
 
 ## 一、用户自建技能（本仓库收录）
@@ -17,6 +17,20 @@
 | `writing-for-agents`（`mattpocock/`） | 仅手动（`/writing-for-agents`） | 编写或修改 skill、AGENTS.md、CLAUDE.md。 |
 
 手动触发的技能（设置了 `disable-model-invocation: true`）不会出现在模型的技能目录中，只能由用户输入名称调用。当前所有用户自建技能都已设为手动触发。
+
+### 第三方技能的本地副本
+
+| 技能 | 来源 | 说明 |
+|---|---|---|
+| `caveman`、`ultracave`、`megacave`、`caveman-commit`、`caveman-review`、`investigate-first`、`lean-build`、`surgical-patch`、`safe-refactor`、`migration`、`verify-and-stop`（`caveman/`） | JuliusBrussee/caveman（Apache-2.0） | 简短输出风格、提交信息、精简审查和六个工作流技能，全部仅手动触发。详见 `docs/caveman使用说明.md`，来源与未搬运内容见 `skills/caveman/NOTICE.md`。 |
+| `ponytail`、`ponytail-review`、`ponytail-audit`、`ponytail-debt`（`ponytail/`） | DietrichGebert/ponytail（MIT） | 最小改动的编码风格、审查、整库审计和技术债清单，仅手动触发。无 hooks，不会自动启用。详见 `docs/ponytail使用说明.md`。 |
+| `mcp-builder`、`skill-creator`（`anthropics/`） | anthropics/skills（Apache-2.0） | 构建 MCP 服务器；创建、改进并评测技能，仅手动触发。 |
+| `find-skills`（`vercel-labs/`） | vercel-labs/skills（MIT） | 搜索并安装技能，依赖 `npx skills`，可能不会安装到 DSH 技能目录，仅手动触发。详见 `docs/find-skills使用说明.md`。 |
+| `understand`、`understand-chat`、`understand-dashboard`、`understand-diff`、`understand-domain`、`understand-explain`、`understand-figma`、`understand-knowledge`、`understand-onboard`（`Egonex-AI/`） | Egonex-AI/Understand-Anything（MIT） | 生成代码库知识图谱并问答、看板、差异分析、业务域、讲解、Figma、知识库、新人引导，仅手动触发。目录结构须保持原样。详见 `docs/Understand-Anything使用说明.md`。 |
+| `addyosmani/` 下 25 个工程流程技能 | addyosmani/agent-skills（MIT） | 仅手动触发。详见 `docs/addyosmani使用说明.md`。 |
+| `ui-ux-pro-max`（`nextlevelbuilder/`） | nextlevelbuilder/ui-ux-pro-max-skill（MIT） | UI/UX 设计知识库与设计系统生成器（Python 脚本），仅手动触发。 |
+| `humanizer`（`blader/`） | blader/humanizer（MIT） | 去除 AI 写作腔，仅手动触发，仅存放在项目内、未安装到 DSH。详见 `docs/humanizer使用说明.md`。 |
+| `i-have-adhd`（`ayghri/`） | ayghri/i-have-adhd（MIT） | 先给动作、编号步骤的输出风格，仅手动触发，仅存放在项目内、未安装到 DSH。详见 `docs/i-have-adhd使用说明.md`。 |
 
 ## 二、本会话可用的其他技能
 
@@ -47,4 +61,7 @@
 | 2026-11-11 | 从 obra/superpowers 复制 4 个技能到 `skills/superpowers/`，设为手动触发，去掉正文中的 `superpowers:` 前缀，并新增 `SUPERPOWERS-NOTICE.md`。 |
 | 2026-11-11 | 六个 mattpocock 相关技能（含 `grill-me`、`handoff`、`writing-for-agents`）移入 `skills/mattpocock/`。 |
 | 2026-11-10 | 新增 `code-review`、`diagnosing-bugs`、`research`、`retro`；移除已合并的 `grilling` 记录；`grill-me`、`handoff`、`reverse-engineer-anything` 改为用户自建并标注手动触发；`reverse-engineer-anything` 改为本地副本；`writing-for-agents` 改为仅手动触发。 |
+| 2026-11-12 | 新增 `skills/caveman/`（11 个技能，来自 JuliusBrussee/caveman commit 3dc497a），均设为手动触发，并新增 `docs/caveman使用说明.md`。 |
 | 2026-11-11 | 删除 `skills/superpowers/`（4 个 obra/superpowers 技能、`SUPERPOWERS-NOTICE.md` 与 `README.md`）。superpowers 相关工作改为直接使用 `E:\AI\superpowers-dsh`（LayneChai/superpowers-dsh，基于上游 v7.0.2）。 |
+| 2026-11-12 | 新增 `skills/ponytail/`、`anthropics/`、`vercel-labs/`、`Egonex-AI/`、`nextlevelbuilder/`、`blader/`、`ayghri/`，均设为手动触发，并补充对应使用说明。 |
+| 2026-11-12 | 新增 skills/addyosmani/(25 个技能 + references/,来自 addyosmani/agent-skills commit 301b02b,MIT),均设为手动触发,新增 docs/addyosmani使用说明.md。 |

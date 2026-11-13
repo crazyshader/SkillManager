@@ -14,6 +14,18 @@ skills/
 │   ├── research/              # 用一手资料调研问题并写入仓库，仅手动触发
 │   ├── retro/                 # 复盘编码会话，提出改进 agent 工作环境的建议，模型可自动调用
 │   └── writing-for-agents/    # 编写或修改 skill、AGENTS.md、CLAUDE.md 的指南，仅手动触发
+├── caveman/                   # 来源 JuliusBrussee/caveman（Apache-2.0）,11 个简短输出与工作流技能，仅手动触发,见 NOTICE.md 与 docs/caveman使用说明.md
+├── addyosmani/                 # 来源 addyosmani/agent-skills(MIT)25 个工程流程技能,仅手动触发,见 NOTICE.md 与 docs/addyosmani使用说明.md
+├── ponytail/                  # 来源 DietrichGebert/ponytail(MIT),4 个"最小改动"风格与审查技能,仅手动触发,见 NOTICE.md 与 docs/ponytail使用说明.md
+├── anthropics/                # 来源 anthropics/skills(Apache-2.0),mcp-builder 与 skill-creator,仅手动触发,见 NOTICE.md
+├── vercel-labs/               # 来源 vercel-labs/skills(MIT),find-skills,仅手动触发,见 NOTICE.md 与 docs/find-skills使用说明.md
+├── Egonex-AI/                 # 来源 Egonex-AI/Understand-Anything(MIT),9 个代码库理解技能及 agents/packages,仅手动触发,见 NOTICE.md 与 docs/Understand-Anything使用说明.md
+├── nextlevelbuilder/          # 来源 nextlevelbuilder/ui-ux-pro-max-skill（MIT）,见 NOTICE.md
+│   └── ui-ux-pro-max/         # UI/UX 设计知识库与设计系统生成器（Python 检索脚本）
+├── blader/                    # 来源 blader/humanizer(MIT),去除 AI 写作腔,仅手动触发,仅存放在项目内、未安装到 DSH,见 NOTICE.md 与 docs/humanizer使用说明.md
+│   └── humanizer/
+├── ayghri/                    # 来源 ayghri/i-have-adhd(MIT),先给动作、编号步骤的输出风格,仅手动触发,仅存放在项目内、未安装到 DSH,见 NOTICE.md 与 docs/i-have-adhd使用说明.md
+│   └── i-have-adhd/
 ├── reverse-engineer-anything/ # 逆向分析与 AgentEnv 重建，仅手动触发
 │   └── references/            # 按需读取的参考文档
 └── writing-for-agents/        # 编写或修改 skill、AGENTS.md、CLAUDE.md 的指南
